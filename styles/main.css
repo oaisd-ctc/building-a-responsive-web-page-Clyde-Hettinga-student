@@ -1,0 +1,47 @@
+body
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(220, 215, 230);
+    color: rgb(40, 40, 40);
+}
+
+nav
+{
+    background-color: rgb(235, 180, 20);
+
+    text-align: center;
+
+    padding: 15px 5px;
+    margin: -8px -8px 5px;
+
+    display: flex;
+}
+
+section
+{
+    background-color: rgb(205, 200, 215);
+    border-radius: 10px;
+    padding: 1px 10px;
+    margin: 10px 5px;
+}
+
+article
+{
+    background-color: rgb(235, 180, 20);
+    border: solid rgb(40, 40, 40) 2px;
+    border-radius: 7px;
+
+    text-align: center;
+
+    margin: 10px;
+}
+
+a
+{
+    color: rgb(25, 15, 0);
+    font-weight: bold;
+    text-decoration: none;
+    
+    flex: 1;
+    justify-content: center;
+}
