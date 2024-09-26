@@ -1,47 +1,224 @@
 body
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(220, 215, 230);
     color: rgb(40, 40, 40);
 }
 
 nav
 {
-    background-color: rgb(235, 180, 20);
-
     text-align: center;
-
-    padding: 15px 5px;
     margin: -8px -8px 5px;
 
     display: flex;
+    transition: .3s;
 }
 
 section
 {
-    background-color: rgb(205, 200, 215);
     border-radius: 10px;
-    padding: 1px 10px;
-    margin: 10px 5px;
 }
 
 article
 {
-    background-color: rgb(235, 180, 20);
     border: solid rgb(40, 40, 40) 2px;
     border-radius: 7px;
 
     text-align: center;
 
-    margin: 10px;
+    transition: .3s;
 }
 
 a
 {
-    color: rgb(25, 15, 0);
     font-weight: bold;
     text-decoration: none;
     
     flex: 1;
     justify-content: center;
+}
+
+#projects
+{
+    transition: .3s;
+}
+
+@media screen and (max-width: 500px)
+{
+    body
+    {
+        background-color: rgb(230, 220, 215);
+    }
+    
+    nav
+    {
+        background-color: rgb(20, 235, 180);
+        padding: .5ch .75em;
+        
+        flex-direction: column;
+    }
+
+    section
+    {
+        background-color: rgb(215, 205, 200);
+        
+        padding: .1ch .5em;
+        margin: .5em .15em;
+    }
+
+    article
+    {
+        background-color: rgb(20, 235, 180);
+        padding: .1em;
+        margin: .25em .5ch .6em;
+        
+        transition: .3s;
+    }
+
+    a
+    {
+        color: rgb(0, 55, 15);
+        padding: .25ch;
+    }
+
+    h2
+    {
+        text-align: center;
+    }
+
+    #about > p
+    {
+        text-align: justify;
+    }
+
+    #projects:active
+    {
+        background-color: rgb(40, 40, 40);
+        color: rgb(20, 235, 180);
+
+        transition: .3s;
+    }
+
+    #projects:active > article
+    {
+        background-color: rgb(215, 205, 200);
+        color: rgb(10, 127, 90);
+
+        transition: .3s;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px)
+{
+    body
+    {
+        background-color: rgb(215, 230, 220);
+    }
+    
+    nav
+    {
+        background-color: rgb(180, 20, 235);
+        padding: .8ch .5em;
+        
+        flex-direction: row;
+    }
+
+    section
+    {
+        background-color: rgb(200, 215, 205);
+        padding: .15ch .6em;
+        margin: 1ch .25ch;
+    }
+
+    article
+    {
+        background-color: rgb(180, 20, 235);
+        padding: .4ch;
+        margin: .5ch .1em .9ch;
+    }
+
+    a
+    {
+        color: rgb(15, 0, 55);
+    }
+
+    article:hover
+    {
+        background-color: rgb(135, 15, 176);
+        color: rgb(0, 0, 0);
+
+        transition: .3s;
+    }
+    
+    article:hover > h3
+    {
+        font-size: 125%;
+    }
+
+    article:hover > p
+    {
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 801px)
+{
+    body
+    {
+        background-color: rgb(220, 215, 230);
+    }
+    
+    nav
+    {
+        background-color: rgb(235, 180, 20);
+        padding: 1ch .75em;
+        
+        flex-direction: row;
+    }
+
+    section
+    {
+        background-color: rgb(205, 200, 215);
+        padding: .1em 1.25ch;
+        margin: 1ch .25ch;
+    }
+
+    article
+    {
+        background-color: rgb(235, 180, 20);
+        padding: .3em;
+        margin: .5em .5ch 1.2ch;
+
+        transition: .3s;
+    }
+
+    a
+    {
+        color: rgb(55, 15, 0);
+    }
+
+    #projects:hover > article:nth-child(even)
+    {
+        background-color: rgb(176, 135, 15);
+    }
+
+    #projects:hover > article:nth-child(odd)
+    {
+        background-color: rgb(255, 198, 22);
+    }
+
+    #projects:active
+    {
+        border: solid rgb(40, 40, 40), 2px;
+        background-color: rgb(235, 180, 20);
+
+        transition: 0s;
+    }
+
+    #projects:active > article, #projects:active > article:nth-child(even), #projects:active > article:nth-child(odd)
+    {
+        background-color: rgb(40, 40, 40);
+        color: rgb(220, 215, 230);
+
+        transition: 0s;
+    }
 }
